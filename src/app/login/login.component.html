@@ -1,0 +1,11 @@
+<h3>Login: </h3>
+
+<form name="loginform"><!-- [formGroup]="loginForm" (submit)=""-->
+    <label for="username" value="Username:" >
+        Username: <input id="username" name="username" type="text">
+    </label><br>
+    <label for="password" value="Password: ">
+        Password: <input id="password" name="password" type="text">
+    </label><br>
+    <button class="button" type="submit" (click)="tryLogin()">Login</button>  
+</form>

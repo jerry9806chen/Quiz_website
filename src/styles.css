@@ -1,0 +1,61 @@
+.btn{
+    border-radius: 0;
+}
+
+.answer{
+    background-color:#e215af;
+    font-size:20px;
+    padding:10px;
+    margin:3px;
+}
+
+#quiz .options input[type=checkbox] {
+    height:22px;
+    width:22px;
+}
+
+.result-question{
+    background-color:#eee;
+    margin:4px;
+    padding:6px;
+}
+
+.bgnd {
+    background-image: linear-gradient(black, teal,red, black);
+}
+
+h2,.h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+h3,.h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Select styling pasted below */
+
+select {
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: rgb(27, 3, 161);
+    padding: .6em 1.4em .5em .8em;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	appearance: none;
+    background-image: url('dropdownArrow.svg'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat;
+	background-position: right .9em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+select::-ms-expand {
+	display: none;
+}
+select:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+}

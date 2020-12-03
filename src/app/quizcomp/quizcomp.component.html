@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col-9">
+    <!--h3 style="color:red" class="text-center">Quiz Project</h3-->
+  </div>
+  <!--div *ngIf="mode==mode[4]" class="col-3" style="float:right"-->
+  <div *ngIf="mode!=modes[3]" class="col-3" style="float:right">
+    <h3 style="color:aquamarine">Select a Quiz:</h3>
+    <select id="quizSelect" [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
+      <option *ngFor="let quiz of quizes" [value]="quiz.id">{{quiz.name}}</option>
+    </select>
+  </div>
+</div>
+<button class="btn btn-secondary" style="float: right;padding-top: 10px;margin-top: 10px;" *ngIf="mode!=modes[3]" (click)="logout()">Logout</button>
+<div *ngIf="mode==modes[3]" style="float:center">
+  <!--app-login></app-login-->
+  <h3 style="color: springgreen;">Login: (Remains a work in progress.)</h3>
+  <h4 *ngIf="loginFailed">Login Failed! Please try again! Proper credentials are Username: "tataemp" and Password: "pass@123"</h4>
+  <form name="loginform"><!-- [formGroup]="loginForm" (submit)=""-->
+      <label for="username" value="Username:" >
+        <p style="color:blue">Username:</p> <input class="input input-info" id="username" name="username" type="text">
+      </label><br>
+      <label for="password" value="Password: ">
+        <p style="color:blue">Password:</p> <input class="input input-info" id="password" name="password" type="password">
+      </label><br>
+      <button class="btn btn-danger" type="submit" (click)="tryLogin()">Login</button>  
+  </form>
+  <p *ngIf="mode==modes[3]" style="color: springgreen;">The username is "tataemp" and the password is "pass@123".</p>
+</div>
+<div *ngIf="mode!=modes[3] && mode!=modes[4]">
+  <h2 class="text-center font-weight-normal" style="color: orange;">{{quiz.name}}</h2>
+  <hr />
+
+  <div *ngIf="mode==modes[0] && quiz">
+    <div *ngFor="let question of filteredQuestions;">
+      <div class="badge badge-primary">Question {{pager.index + 1}} of {{pager.count}}.</div>
+      <div *ngIf="config.quizTime && config.displayClock" class="badge badge-warning float-right">Time: {{ellapsedTime}} / {{quizTime}}</div>
+      <h3 class="font-weight-normal">{{pager.index + 1}}.
+        <span [innerHTML]="question.questionStr"></span>
+      </h3>
+      <div class="row float-center">
+        <div class="col-7" *ngFor="let answer of question.answers">
+          <div class="answer">
+            <label class="font-weight-normal" [attr.for]="answer.answerNum">
+              <input id="{{answer.answerNum}}" type="checkbox" [(ngModel)]="answer.selected" (change)="onSelect(question, answer);" /> {{answer.answerStr}}
+            </label>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="text-center">
+        <button class="btn btn-danger" *ngIf="config.allowGoBack" (click)="goTo(0);">First</button>
+        <button class="btn btn-warning" *ngIf="config.allowGoBack" (click)="goTo(pager.index - 1);">Prev</button>
+        <button class="btn btn-success" *ngIf="config.allowGoBack || (!config.allowGoBack && question.answered)" (click)="goTo(pager.index + 1);">Next</button>
+        <button class="btn btn-primary" *ngIf="config.allowGoBack" (click)="goTo(pager.count - 1);">Last</button>
+      </div>
+    </div>
+    <hr/>
+    
+  </div>
+
+  <div class="row text-center" *ngIf="mode==modes[2]">
+    <div class="col-4 cursor-pointer" *ngFor="let question of quiz.questions; let index = index;">
+      <div (click)="goTo(index)" class="p-3 mb-2 {{ isAnswered(question) == 'Answered'? 'bg-info': 'bg-warning' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
+    </div>
+  </div>
+  <div class="col-7" *ngIf="config.requireAllAnswered && !allQuestionsAnswered() && mode == modes[0]">
+    <h4 style="color:blueviolet">Must answer all questions to submit.</h4>
+  </div>
+  <div class="text-right" *ngIf="mode==modes[0] || mode==modes[2]">
+    <button class="btn btn-warning" (click)="mode = modes[0]">Display Quiz</button>
+    <button class="btn btn-info"    (click)="mode = modes[2]" *ngIf="config.allowReview">Display Review</button>
+    <button class="btn btn-primary" (click)="onSubmit();"     *ngIf="!config.requireAllAnswered || (config.requireAllAnswered && allQuestionsAnswered())"><b>Submit Quiz</b></button>
+  </div>
+  <div class="result" *ngIf="mode==modes[1]">
+    <h2 style="color: red;">Quiz Result</h2>
+    <div *ngFor="let question of quiz.questions; let index = index">
+      <div class="result-question">
+        <h5>{{index + 1}}. {{question.questionStr}}</h5>
+          <div class="row col-6" *ngFor="let Option of question.answers">
+            <input id="{{Option.answerStr}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.answerStr}}
+          </div>
+        <div class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</div>
+      </div>
+    </div>
+    <h4 class="alert alert-info text-center">You may close this window now.</h4>
+  </div>
+</div>

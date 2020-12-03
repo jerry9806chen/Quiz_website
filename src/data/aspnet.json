@@ -1,0 +1,367 @@
+{
+    "id": 1,
+    "name": "Asp.Net Quiz",
+    "description": "Asp.Net Quiz (contains webform, mvc, web API, etc.)",
+    "questions": [
+        {
+            "questionNum": 1010,
+            "questionStr": "ASP.NET webform separates the HTML output from program logic using a feature named as",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Exception",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Code-behind",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Code-front",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "None of the above",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1011,
+            "questionStr": "The feature in ASP.NET 2.0 that is used to fire a normal postback to a different page in the application is called",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Theme",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Code-front",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Cross Page Posting",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "None of the above",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1012,
+            "questionStr": "What class does the ASP.NET Web Form class inherit from by default?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "System.Web.UI.Page",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "System.Web.UI.Form",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "System.Web.GUI.Page",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "System.Web.Form",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1013,
+            "questionStr": "What does MVC stand for?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Model View Controller",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Maximum Virtual Control",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Microsoft Visual Core",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "None of the above",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1014,
+            "questionStr": "Which of the following does NOT require type casting?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Session",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "TempData",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "ViewData",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "ViewBag",
+                    "isCorrect": true
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1015,
+            "questionStr": "Which is the correct order of Page life-cycle in asp.net webform?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Init, PreRender, Load",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Load, PreRender, Init",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Init, Load, PreRender",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "None of the above",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1016,
+            "questionStr": "Which of these data source controls do not implement caching?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "ObjectDataSource",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "LinqDataSource",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "SqlDataSource",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "XmlDataSource",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1017,
+            "questionStr": "Which tag asp:Label control by default renders to?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "div",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "span",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "body",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "label",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1018,
+            "questionStr": "Which method do you use to explicitly kill a user's session?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "Session.Terminate()",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Session.TimeOut()",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Session.Abondon()",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "Session.Kill()",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "questionNum": 1019,
+            "questionStr": "Which of the following object is ideal for keeping data alive for a single request?",
+            "questionTypeNum": 1,
+            "options": [
+                {
+                    "answerNum": 1055,
+                    "questionNum": 1010,
+                    "answerStr": "HttpContext",
+                    "isCorrect": true
+                },
+                {
+                    "answerNum": 1056,
+                    "questionNum": 1010,
+                    "answerStr": "Session",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1057,
+                    "questionNum": 1010,
+                    "answerStr": "Cookies",
+                    "isCorrect": false
+                },
+                {
+                    "answerNum": 1058,
+                    "questionNum": 1010,
+                    "answerStr": "SqlServer",
+                    "isCorrect": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}
